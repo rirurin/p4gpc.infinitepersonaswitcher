@@ -1,0 +1,18 @@
+{
+  "ModId": "p4gpc.infinitepersonaswitcher",
+  "ModName": "Infinite Persona Switcher",
+  "ModAuthor": "Rirurin",
+  "ModVersion": "1.0.0",
+  "ModDescription": "Limit on Persona switching on a battle turn removed",
+  "ModDll": "p4gpc.infinitepersonaswitcher.dll",
+  "ModIcon": "Preview.png",
+  "ModR2RManagedDll32": "x86/p4gpc.infinitepersonaswitcher.dll",
+  "ModR2RManagedDll64": "x64/p4gpc.infinitepersonaswitcher.dll",
+  "ModNativeDll32": "",
+  "ModNativeDll64": "",
+  "ModDependencies": [ "reloaded.sharedlib.hooks" ],
+  "OptionalDependencies": null,
+  "SupportedAppId": [
+    "p4g.exe"
+  ]
+}
