@@ -58,7 +58,7 @@ namespace p4gpc.infinitepersonaswitcher
 
             /* Your mod code starts here. */
             _utils = new Utils(_configuration, _logger);
-            _memory = new SwitchStart(_utils);
+            _memory = new SwitchStart(_configuration, _utils);
 
         }
 
@@ -75,6 +75,7 @@ namespace p4gpc.infinitepersonaswitcher
             // Apply settings from configuration.
             // ... your code here.
             _utils.Log("Updating Configuration");
+            _memory.UpdateConfig(_configuration);
             _utils.Configuration = _configuration;
         }
 

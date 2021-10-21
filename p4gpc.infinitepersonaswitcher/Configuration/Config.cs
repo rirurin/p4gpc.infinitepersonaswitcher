@@ -17,5 +17,9 @@ namespace p4gpc.infinitepersonaswitcher.Configuration
         [DisplayName("Debug Mode")]
         [Description("Enable/Disable Debug Mode")]
         public bool DebugEnabled { get; set; } = false;
+
+        [DisplayName("Instant Switching")]
+        [Description("Toggles instant Persona switching (removes the animation)")]
+        public bool InstantSwitch { get; set; } = true;
     }
 }
