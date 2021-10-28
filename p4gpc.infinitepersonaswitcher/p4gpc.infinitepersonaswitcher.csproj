@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>Path/To/Your/Reloaded-II/Mods/Folder</OutputPath>
+    <OutputPath>Path/To/Your/Reloaded/Mods/Folder</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>

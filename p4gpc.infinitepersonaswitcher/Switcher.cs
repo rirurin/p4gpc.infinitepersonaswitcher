@@ -27,7 +27,7 @@ namespace p4gpc.infinitepersonaswitcher
             _baseAddress = thisProcess.MainModule.BaseAddress.ToInt32();
             using var scanner = new Scanner(thisProcess, thisProcess.MainModule);
             // scan for infinite switching address
-            int switcherAddress = scanner.CompiledFindPattern("F7 46 1C 00 04 00 00 74 AF").Offset + _baseAddress + 7;
+            int switcherAddress = scanner.CompiledFindPattern("F7 46 ?? ?? ?? ?? ?? 74 AF").Offset + _baseAddress + 7;
             // scan for points to skip persona switching animation
             instantSwitch1 = scanner.CompiledFindPattern("0F B7 7B 78 BA 0C 00 00 00 8B 73 38").Offset + _baseAddress;
             instantSwitch2 = scanner.CompiledFindPattern("A1 80 16 AF 00 8B 53 38 6A 00 6A 00").Offset + _baseAddress;

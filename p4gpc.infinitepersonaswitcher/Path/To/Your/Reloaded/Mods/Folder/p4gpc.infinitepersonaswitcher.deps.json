@@ -1,0 +1,128 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "p4gpc.infinitepersonaswitcher/1.0.0": {
+        "dependencies": {
+          "Reloaded.Memory": "3.0.1",
+          "Reloaded.Memory.Sigscan": "1.2.1",
+          "Reloaded.Mod.Interfaces": "1.6.0",
+          "Reloaded.SharedLib.Hooks": "1.4.0"
+        },
+        "runtime": {
+          "p4gpc.infinitepersonaswitcher.dll": {}
+        }
+      },
+      "Reloaded.Hooks.Definitions/1.4.0": {
+        "runtime": {
+          "lib/netstandard2.0/Reloaded.Hooks.Definitions.dll": {
+            "assemblyVersion": "1.4.0.0",
+            "fileVersion": "1.4.0.0"
+          }
+        }
+      },
+      "Reloaded.Memory/3.0.1": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Reloaded.Memory.dll": {
+            "assemblyVersion": "3.0.1.0",
+            "fileVersion": "3.0.1.0"
+          }
+        }
+      },
+      "Reloaded.Memory.Sigscan/1.2.1": {
+        "dependencies": {
+          "Reloaded.Memory": "3.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Reloaded.Memory.Sigscan.dll": {
+            "assemblyVersion": "1.2.1.0",
+            "fileVersion": "1.2.1.0"
+          }
+        }
+      },
+      "Reloaded.Mod.Interfaces/1.6.0": {
+        "runtime": {
+          "lib/netstandard2.0/Reloaded.Mod.Interfaces.dll": {
+            "assemblyVersion": "1.6.0.0",
+            "fileVersion": "1.6.0.0"
+          }
+        }
+      },
+      "Reloaded.SharedLib.Hooks/1.4.0": {
+        "dependencies": {
+          "Reloaded.Hooks.Definitions": "1.4.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Reloaded.Hooks.ReloadedII.Interfaces.dll": {
+            "assemblyVersion": "1.4.0.0",
+            "fileVersion": "1.4.0.0"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.7.0": {
+        "runtime": {
+          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "assemblyVersion": "4.0.6.0",
+            "fileVersion": "4.700.19.56404"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "p4gpc.infinitepersonaswitcher/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Reloaded.Hooks.Definitions/1.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5Q+QArrP5ZlD6Sk8o+qpoZztrSkW+UDaWrRCYtaqIP9iwgWhLPTWxtNWVzWuWs2NK+3QtqLtT6U4fvMta4d/PA==",
+      "path": "reloaded.hooks.definitions/1.4.0",
+      "hashPath": "reloaded.hooks.definitions.1.4.0.nupkg.sha512"
+    },
+    "Reloaded.Memory/3.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ce39mg2NF9WyuKPMjnHf+VLizw2JiR6p/zzRa62U5Y2/tPDjUoKW4eOkSpwKJ7HhRH/NJDnJ4DjGeOuiq5ThVA==",
+      "path": "reloaded.memory/3.0.1",
+      "hashPath": "reloaded.memory.3.0.1.nupkg.sha512"
+    },
+    "Reloaded.Memory.Sigscan/1.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-25ccJ8QtNCbbuUNTjHDZhcDVw1FTtSCoBaU5iaJvsG3/00PnNW0LpI5AviJRb6W4Moe965EtiQLD2uZjg0hoVw==",
+      "path": "reloaded.memory.sigscan/1.2.1",
+      "hashPath": "reloaded.memory.sigscan.1.2.1.nupkg.sha512"
+    },
+    "Reloaded.Mod.Interfaces/1.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TLC1I5MaOOWDHERFH0MK2nuZqVBXuQVqHXxm0qPk01XXFeFarjpLNZXQLSDTK6/UGjiSWdUfrDOOTSOYpX1fwA==",
+      "path": "reloaded.mod.interfaces/1.6.0",
+      "hashPath": "reloaded.mod.interfaces.1.6.0.nupkg.sha512"
+    },
+    "Reloaded.SharedLib.Hooks/1.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5sQtCNsE8gNCWvVHkITQhYG1M/3w0KOhxbOAKbEdyHKnMg3cReVcWv29hw74eCRw37cvaZhxuG6MOM9gNyVOJw==",
+      "path": "reloaded.sharedlib.hooks/1.4.0",
+      "hashPath": "reloaded.sharedlib.hooks.1.4.0.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IpU1lcHz8/09yDr9N+Juc7SCgNUz+RohkCQI+KsWKR67XxpFr8Z6c8t1iENCXZuRuNCc4HBwme/MDHNVCwyAKg==",
+      "path": "system.runtime.compilerservices.unsafe/4.7.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.7.0.nupkg.sha512"
+    }
+  }
+}
