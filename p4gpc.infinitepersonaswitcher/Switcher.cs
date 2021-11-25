@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 using p4gpc.infinitepersonaswitcher.Configuration;
 using Reloaded.Hooks.Definitions;
+using System.Threading.Tasks;
 
 namespace p4gpc.infinitepersonaswitcher
 {
@@ -26,11 +27,28 @@ namespace p4gpc.infinitepersonaswitcher
             using var thisProcess = Process.GetCurrentProcess();
             _baseAddress = thisProcess.MainModule.BaseAddress.ToInt32();
             using var scanner = new Scanner(thisProcess, thisProcess.MainModule);
-            // scan for infinite switching address
-            int switcherAddress = scanner.CompiledFindPattern("F7 46 ?? ?? ?? ?? ?? 74 AF").Offset + _baseAddress + 7;
+            List<Task> pointers = new List<Task>();
+            int switcherAddress = 0;
+            pointers.Add(Task.Run(() =>
+            {
+                switcherAddress = scanner.CompiledFindPattern("F7 46 ?? ?? ?? ?? ?? 74 AF").Offset + _baseAddress + 7; // scan for infinite switching address
+            }));
             // scan for points to skip persona switching animation
-            instantSwitch1 = scanner.CompiledFindPattern("0F B7 7B 78 BA 0C 00 00 00 8B 73 38").Offset + _baseAddress;
-            instantSwitch2 = scanner.CompiledFindPattern("A1 ?? ?? ?? ?? 8B 53 38 6A 00 6A 00").Offset + _baseAddress;
+            pointers.Add(Task.Run(() =>
+            {
+                instantSwitch1 = scanner.CompiledFindPattern("0F B7 7B 78 BA 0C 00 00 00 8B 73 38").Offset + _baseAddress;
+            }));
+            pointers.Add(Task.Run(() =>
+            {
+                instantSwitch2 = scanner.CompiledFindPattern("A1 ?? ?? ?? ?? 8B 53 38 6A 00 6A 00").Offset + _baseAddress;
+            }));
+            try
+            {
+                Task.WaitAll(pointers.ToArray());
+            } catch (Exception e)
+            {
+                throw e;
+            }
             // read and save original memory values for instant switch toggle
             _memory.SafeRead((IntPtr)instantSwitch1, out instantSwitchOriginal1);
             _memory.SafeRead((IntPtr)instantSwitch2, out instantSwitchOriginal2);

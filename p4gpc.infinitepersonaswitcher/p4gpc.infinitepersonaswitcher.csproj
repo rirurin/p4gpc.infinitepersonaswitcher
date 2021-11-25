@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>Path/To/Your/Reloaded/Mods/Folder</OutputPath>
+    <OutputPath>C:\Users\Bryce\Rirurin\p4g-cbt\tools\Reloaded\Mods\p4gpc.infiniteswitcher\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
